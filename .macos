@@ -39,7 +39,7 @@ echo "installing apps with brew cask"
 brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
 google-backup-and-sync itsycal visual-studio-code dash screenflow skype  \
 obs zoomus dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
-shuttle telegram whattsapp screenflow
+shuttle telegram whatsapp screenflow
 
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
