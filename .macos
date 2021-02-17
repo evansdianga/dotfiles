@@ -4,7 +4,7 @@
 # Modified by Kent C. Dodds https://raw.githubusercontent.com/kentcdodds/dotfiles/master/.macos
 # Modified by Evans Dianga
 # Run without downloading:
-# curl https://raw.githubusercontent.com/evansdianga/dotfiles/master/.macos | bash
+# curl https://raw.githubusercontent.com/evansdianga/dotfiles/main/.macos | bash
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
