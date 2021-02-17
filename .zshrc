@@ -12,6 +12,7 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle you-should-use
+antigen bundle zsh-autosuggestions
 antigen bundle docker
 antigen bundle docker-compose
 antigen bundle ng
