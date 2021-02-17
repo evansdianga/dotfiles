@@ -28,6 +28,10 @@ mkdir -p "${HOME}/code"
 echo "installing homebrew"
 # install homebrew https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Add Homebrew to PATH
+echo "Adding Homebrew to PATH"
+echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/evansdianga/.zprofile
+eval $(/opt/homebrew/bin/brew shellenv)
 echo "brew installing stuff"
 # hub: a github-specific version of git
 # tree: really handy for listing out directories in text
