@@ -1,15 +1,41 @@
 alias gs="git status"
 alias vscode="code-insiders"
-# If you come from bash you might have to change your $PATH.
+# If 
+
+
+
+come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+source ~/Projects/antigen.zsh
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/evansdianga/.oh-my-zsh
+#export ZSH=/Users/evansdianga/.oh-my-zsh
+antigen use oh-my-zsh
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
 
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle you-should-use
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle ng
+antigen bundle npm
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,9 +79,11 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(you-should-use git docker docker-compose ng npm)
+# plugins=(you-should-use git docker docker-compose ng npm)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+
+
 
 # User configuration
 
