@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
-# Modified by Kent C. Dodds
+# Modified by Kent C. Dodds https://raw.githubusercontent.com/kentcdodds/dotfiles/master/.macos
+# Modified by Evans Dianga
 # Run without downloading:
-# curl https://raw.githubusercontent.com/kentcdodds/dotfiles/master/.macos | bash
+# curl https://raw.githubusercontent.com/evansdianga/dotfiles/master/.macos | bash
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -26,54 +27,33 @@ mkdir -p "${HOME}/code"
 
 echo "installing homebrew"
 # install homebrew https://brew.sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "brew installing stuff"
 # hub: a github-specific version of git
-# libdvdcss: makes handbreak capable of ripping DVDs
-# ripgrep: rg is faster than alternatives
-# imagemagick: eventually I will need this for something
-# ffmpeg: eventually I'll need this for something
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
-# switchaudio-osx: allows me to switch the audio device via the command line
-brew install git hub libdvdcss ripgrep imagemagick watchman tree bat \
-delta switchaudio-osx
-
-echo "installing node (via n-install)"
-curl -L https://git.io/n-install | bash
-
-echo "node --version: $(node --version)"
-echo "npm --version: $(npm --version)"
-
-echo "installing a few global npm packages"
-npm install --global serve fkill-cli npm-quick-run \
-semantic-release-cli npm-check-updates
+# tor-browser: Web browser focusing on security
+brew install git hub delta tree bat tor-browser 
 
 echo "installing apps with brew cask"
-brew install --cask alfred google-chrome firefox brave-browser bettertouchtool divvy \
-bartender google-drive-file-stream itsycal visual-studio-code 1password dash \
-screenflow marshallofsound-google-play-music-player skype workflowy \
-sublime-text vlc discord obs handbrake zoomus betterzip avibrazil-rdm sip \
-qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
-suspicious-package qlvideo spotify focus dropbox front qmoji slack
+brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
+google-backup-and-sync itsycal visual-studio-code dash screenflow skype  \
+obs zoomus dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
+shuttle telegram whattsapp screenflow
 
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
 touch ~/.ssh/config
-ssh-keygen -t rsa -b 4096 -C "me+github@kentcdodds.com"
+ssh-keygen -t rsa -b 4096 -C "evans@itsevans.com"
 echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
 echo "cloning dotfiles"
-git clone git@github.com:kentcdodds/dotfiles.git "${HOME}/dotfiles"
+git clone git@github.com:evansdianga/dotfiles.git "${HOME}/dotfiles"
 ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
 ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
-ln -s "${HOME}/dotfiles/.my_bin" "${HOME}/.my_bin"
-ln -s "${HOME}/dotfiles/.vimrc" "${HOME}/.vimrc"
-ln -s "${HOME}/dotfiles/.vimrc-parts" "${HOME}/.vimrc-parts"
 
 # get bat and delta all configured
 mkdir -p "${HOME}/.config/bat/themes"
@@ -85,6 +65,18 @@ echo "making system modifications:"
 
 # Make Chrome Two finger swipe for back and forward
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
+
+###############################################################################
+# Evans' Customizations                                                       #
+###############################################################################
+echo "Create default screenshots directory"
+mkdir -p ~/Desktop/screenshots
+
+echo "Create Projects directory"
+mkdir -p ~/Projects
+
+echo "Install antigen - Plugin manager for zsh"
+curl -L git.io/antigen > ~/Projects/antigen.zsh
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -282,7 +274,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -883,10 +875,10 @@ printf "TODO:\n\
 install: \n\
   battery indicator (App Store) \n\
   Gifski (App Store) \n\
-  Runcat (App Store) \n\
-  Todoist (App Store) \n\
   Webcam Settings (App Store) \n\
   Audacity (https://www.audacityteam.org/download/) \n\
+  EGW Writings \n\
+  E-Sword(App store)
 \n\
 Restart Terminal.app\n\
 copy git config from your backup/re-login \n\
