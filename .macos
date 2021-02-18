@@ -80,6 +80,17 @@ mkdir -p ~/Projects
 echo "Install antigen - Plugin manager for zsh"
 curl -L git.io/antigen > ~/Projects/antigen.zsh
 
+
+## Install Fonts
+
+cd ~/Library/Fonts && { 
+    curl -O 'https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-Bold.ttf'
+    curl -O 'https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-Medium.ttf'
+    curl -O 'https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-Regular.ttf'
+    curl -O 'https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-Retina.ttf'
+    curl -O 'https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-SemiBold.ttf'
+    cd -; }
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
