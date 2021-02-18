@@ -38,7 +38,7 @@ brew install git hub delta tree bat
 echo "installing apps with brew cask"
 brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
 google-backup-and-sync itsycal visual-studio-code dash screenflow skype  \
-obs zoomus dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
+obs zoom dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
 shuttle telegram whatsapp screenflow microsoft-edge zoho-mail skyfonts tor-browser
 
 echo "Generating an RSA token for GitHub"
@@ -47,7 +47,7 @@ touch ~/.ssh/config
 ssh-keygen -t ed25519 -C "evans@itsevans.com"
 eval "$(ssh-agent -s)"
 open ~/.ssh/config
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" > ~/.ssh/config
 ssh-add -K ~/.ssh/id_ed25519
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
