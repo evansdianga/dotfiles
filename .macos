@@ -414,7 +414,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 16 pixels
-defaults write com.apple.dock tilesize -int 16
+# defaults write com.apple.dock tilesize -int 16
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
@@ -431,6 +431,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
+# Reset by running "defaults delete com.apple.dock; killall Dock" in the command line
 defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
