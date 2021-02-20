@@ -160,8 +160,6 @@ xi18n) opts="--app --i18n-format --locale --out-file --output-path --progress --
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. /Users/edianga/anaconda3/etc/profile.d/conda.sh
-# eval "$(register-python-argcomplete conda)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/evansdianga/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/evansdianga/Desktop/google-cloud-sdk/path.zsh.inc'; fi
