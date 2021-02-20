@@ -19,7 +19,13 @@
   default = current
 [core]
   pager = delta --theme="night-owlish"
-	excludesfile = /Users/kentcdodds/.gitignore_global
+	excludesfile = /Users/evansdianga/.gitignore_global
+
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Monokai Extended
+
 [interactive]
     diffFilter = delta --color-only
 [color]
