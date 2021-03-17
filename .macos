@@ -33,7 +33,7 @@ echo "brew installing stuff"
 # hub: a github-specific version of git
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
-brew install git gh git-delta tree bat
+brew install git hub gh git-delta tree bat
 
 echo "installing apps with brew cask"
 brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
