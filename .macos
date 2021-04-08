@@ -41,6 +41,9 @@ google-backup-and-sync itsycal visual-studio-code dash screenflow skype  \
 obs zoom dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
 shuttle telegram whatsapp microsoft-edge zoho-mail skyfonts tor-browser
 
+## Configure git to use VS Code as default editor. Wait for Tab close
+git config --global core.editor "code --wait"
+
 # echo "Generating an RSA token for GitHub"
 # mkdir -p ~/.ssh
 # touch ~/.ssh/config
