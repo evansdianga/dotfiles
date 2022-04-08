@@ -1,6 +1,7 @@
 [user]
   name = Evans Dianga
   email = code@itsevans.com
+	signingkey = rsa4096/54A622E13BE2CDF0
 
 [pull]
   rebase = true
@@ -18,18 +19,26 @@
 [push]
   default = current
 [core]
-  pager = delta --theme="night-owlish"
+  pager = delta
 	excludesfile = /Users/evansdianga/.gitignore_global
+	editor = code --wait
 
 [delta]
-    plus-color = "#012800"
-    minus-color = "#340001"
-    syntax-theme = Monokai Extended
+	side-by-side = true
+  features = side-by-side line-numbers decorations
+  syntax-theme = Dracula
 
 [interactive]
     diffFilter = delta --color-only
 [color]
-	ui = true
+	ui = always
+	branch = always
+	diff = always
+  interactive = always
+  status = always
+  grep = always
+  decorate = always
+  showbranch = always
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
@@ -44,3 +53,8 @@
 	whitespace = red reverse
 [init]
 	defaultBranch = main
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+
