@@ -37,9 +37,9 @@ echo "brew installing stuff"
 brew install git hub gh git-delta tree bat rsync
 
 echo "installing apps with brew cask"
-brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
-itsycal visual-studio-code dash screenflow skype  \
-obs zoom dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
+brew install --cask adobe-acrobat-reader alfred firefox brave-browser \
+itsycal dash screenflow  \
+obs dropbox slack elmedia-player gpg-suite-no-mail kindle postman \
 shuttle telegram whatsapp microsoft-edge zoho-mail skyfonts tor-browser spotify
 
 ## Configure git to use VS Code as default editor. Wait for Tab close
@@ -56,7 +56,7 @@ git config --global core.editor "code --wait"
 # echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
 
 echo "cloning dotfiles"
-touch /Users/${whoami}/.gitconfig
+touch /Users/$(whoami)/.gitconfig
 git clone git@github.com:evansdianga/dotfiles.git "${HOME}/dotfiles"
 ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
