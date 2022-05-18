@@ -56,6 +56,7 @@ git config --global core.editor "code --wait"
 # echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
 
 echo "cloning dotfiles"
+touch /Users/${whoami}/.gitconfig
 git clone git@github.com:evansdianga/dotfiles.git "${HOME}/dotfiles"
 ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
