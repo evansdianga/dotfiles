@@ -37,9 +37,9 @@ echo "brew installing stuff"
 brew install git hub gh git-delta tree bat rsync
 
 echo "installing apps with brew cask"
-brew install --cask adobe-acrobat-reader alfred firefox brave-browser \
-itsycal dash screenflow  \
-obs dropbox slack elmedia-player gpg-suite-no-mail kindle postman \
+brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
+itsycal visual-studio-code dash screenflow skype  \
+obs zoom dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
 shuttle telegram whatsapp microsoft-edge zoho-mail skyfonts tor-browser spotify
 
 ## Configure git to use VS Code as default editor. Wait for Tab close
