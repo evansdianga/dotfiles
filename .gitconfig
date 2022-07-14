@@ -1,7 +1,7 @@
 [user]
   name = Evans Dianga
   email = code@itsevans.com
-	signingkey = rsa4096/54A622E13BE2CDF0
+  signingkey = rsa4096/54A622E13BE2CDF0
 
 [pull]
   rebase = true
