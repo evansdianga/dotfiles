@@ -20,39 +20,39 @@
   default = current
 [core]
   pager = delta
-	excludesfile = /Users/evansdianga/.gitignore_global
-	editor = code --wait
+  excludesfile = /Users/evansdianga/.gitignore_global
+  editor = code --wait
 
 [delta]
-	side-by-side = true
+  side-by-side = true
   features = side-by-side line-numbers decorations
   syntax-theme = Dracula
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [color]
-	ui = always
-	branch = always
-	diff = always
+  ui = always
+  branch = always
+  diff = always
   interactive = always
   status = always
   grep = always
   decorate = always
   showbranch = always
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = 11
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [merge]
   conflictstyle = diff3
 [diff]
