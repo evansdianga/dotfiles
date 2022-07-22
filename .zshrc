@@ -166,3 +166,7 @@ if [ -f '/Users/evansdianga/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/U
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/evansdianga/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/evansdianga/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+source ~/.zshrc.private
