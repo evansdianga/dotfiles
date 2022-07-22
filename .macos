@@ -4,7 +4,7 @@
 # Modified by Kent C. Dodds https://raw.githubusercontent.com/kentcdodds/dotfiles/master/.macos
 # Modified by Evans Dianga
 # Run without downloading:
-# curl https://raw.githubusercontent.com/evansdianga/dotfiles/main/.macos | bash
+# curl https://raw.githubusercontent.com/evansdianga/dotfiles/HEAD/.macos | bash
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -36,14 +36,17 @@ echo "brew installing stuff"
 # Update rsync as Apple uses a very old version of rsync
 brew install git hub gh git-delta tree bat rsync
 
-echo "installing apps with brew cask"
-brew install --cask adobe-acrobat-reader alfred google-chrome firefox brave-browser \
-itsycal visual-studio-code dash screenflow skype  \
+echo "installing apps with brew --cask"
+brew install --cask adobe-acrobat-reader google-chrome firefox brave-browser \
+itsycal visual-studio-code dash screenflow skype docker \
 obs zoom dropbox slack elmedia-player gpg-suite-no-mail iterm2 kindle postman \
-shuttle telegram whatsapp microsoft-edge zoho-mail skyfonts tor-browser spotify
+shuttle telegram whatsapp microsoft-edge zoho-mail tor-browser spotify
 
 ## Configure git to use VS Code as default editor. Wait for Tab close
 git config --global core.editor "code --wait"
+
+echo "instlling node via nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # echo "Generating an RSA token for GitHub"
 # mkdir -p ~/.ssh
