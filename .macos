@@ -48,15 +48,15 @@ git config --global core.editor "code --wait"
 echo "instlling node via nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-# echo "Generating an RSA token for GitHub"
-# mkdir -p ~/.ssh
-# touch ~/.ssh/config
-# ssh-keygen -t ed25519 -C "evans@itsevans.com"
-# eval "$(ssh-agent -s)"
-# open ~/.ssh/config
-# echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" > ~/.ssh/config
-# ssh-add -K ~/.ssh/id_ed25519
-# echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
+echo "Generating an RSA token for GitHub"
+mkdir -p ~/.ssh
+touch ~/.ssh/config
+ssh-keygen -t ed25519 -C "evans@itsevans.com"
+eval "$(ssh-agent -s)"
+open ~/.ssh/config
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" > ~/.ssh/config
+ssh-add -K ~/.ssh/id_ed25519
+echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
 
 echo "cloning dotfiles"
 touch /Users/$(whoami)/.gitconfig
