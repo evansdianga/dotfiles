@@ -2,7 +2,8 @@
   name = Evans Dianga
   email = code@itsevans.com
   signingkey = rsa4096/54A622E13BE2CDF0
-
+[http]
+  postBuffer = 1048576000
 [pull]
   rebase = true
 [branch]
