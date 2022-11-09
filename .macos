@@ -34,7 +34,7 @@ echo "brew installing stuff"
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
 # Update rsync as Apple uses a very old version of rsync
-brew install git hub gh git-delta tree bat rsync
+brew install git hub gh git-delta tree bat rsync git-lfs
 
 echo "installing apps with brew --cask"
 brew install --cask adobe-acrobat-reader google-chrome firefox brave-browser \
@@ -62,6 +62,7 @@ ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 # get bat and delta all configured
 mkdir -p "${HOME}/.config/bat/themes"
 ln -s "${HOME}/dotfiles/.config/bat/config" "${HOME}/.config/bat/config"
+git lfs install
 git clone https://github.com/batpigandme/night-owlish "${HOME}/.config/bat/themes/night-owlish"
 bat cache --build
 
