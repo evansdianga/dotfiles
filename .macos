@@ -34,7 +34,7 @@ echo "brew installing stuff"
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
 # Update rsync as Apple uses a very old version of rsync
-brew install git hub gh git-delta tree bat rsync git-lfs
+brew install git hub gh git-delta tree bat rsync git-lfs hugo
 
 echo "installing apps with brew --cask"
 brew install --cask adobe-acrobat-reader google-chrome firefox brave-browser \
